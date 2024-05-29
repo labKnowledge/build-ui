@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 80
 
 # Command to run your app
-CMD ["npm","start"]
+CMD ["npm","run"]

@@ -5,19 +5,19 @@ FROM node:lts-alpine
 WORKDIR /app
 
 # Copy package.json and yarn.lock to the working directory
-COPY package.json yarn.lock ./
+COPY package.json package.lock ./
 
 # Install dependencies with yarn
-RUN yarn install
+RUN npm install
 
 # Copy the rest of the application
 COPY . .
 
-# Build TypeScript code
-RUN yarn build
+
+RUN npm build
 
 # Expose the port your app runs on
 EXPOSE 80
 
 # Command to run your app
-CMD ["yarn", "start"]
+CMD ["npm","run", "dev"]

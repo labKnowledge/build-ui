@@ -17,7 +17,7 @@ COPY . .
 # RUN npm build
 
 # Expose the port your app runs on
-EXPOSE 80
+EXPOSE 3000
 
 # Command to run your app
-CMD ["npm","run"]
+CMD ["npm","run dev"]
